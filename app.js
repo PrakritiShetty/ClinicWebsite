@@ -13,7 +13,12 @@ var db=mongoose.connection;
 db.on('error',console.error.bind(console,'MongoDB connection error'))
 //modules from routes directory
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var aboutRouter = require('./routes/about');
+var cosmeticservicesRouter = require('./routes/cosmeticServices');
+var generalServicesRouter = require('./routes/generalServices');
+var surgicalServicesRouter = require('./routes/surgicalServices');
+var formRouter = require('./routes/form');
+
 
 var app = express();
 
@@ -32,7 +37,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));//to serve all static files.
 //add our route handling code to the request handling chain
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/about', aboutRouter);
+app.use('/cosmeticServices', cosmeticServicesRouter);
+app.use('/generalServices', generalServicesRouter);
+app.use('/surgicalServices', surgicalServicesRouter);
+app.use('/bookAppointment', formRouter);
+
 // Middleware for error handling
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
