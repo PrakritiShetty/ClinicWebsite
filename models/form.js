@@ -9,7 +9,8 @@ var formSchema= new Schema({
     calendar:{type:Date, required:true},
     paymentMode:{type:String, required:true},
     email:{type:String, required:true},
-    mobile:{type:Number, required:true}
+    mobile:{type:Number, required:true},
+    birthday:{type:Date, required:true}
 
 });
 
