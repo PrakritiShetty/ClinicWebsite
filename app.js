@@ -14,7 +14,7 @@ db.on('error',console.error.bind(console,'MongoDB connection error'))
 //modules from routes directory
 var indexRouter = require('./routes/index');
 var aboutRouter = require('./routes/about');
-var cosmeticservicesRouter = require('./routes/cosmeticServices');
+var cosmeticServicesRouter = require('./routes/cosmeticServices');
 var generalServicesRouter = require('./routes/generalServices');
 var surgicalServicesRouter = require('./routes/surgicalServices');
 var formRouter = require('./routes/form');
