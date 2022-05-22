@@ -5,12 +5,12 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, Route} from "react-router-dom"
 
-var index=require('./components/index');
-var about=require('./components/about');
-var cosmeticServices=require('./components/cosmeticServices');
-var generalServices=require('./components/generalServices');
-var surgicalServices=require('./components/surgicalServices');
-var form=require('./components/form');
+import Index from './components/index.component'; 
+import about from './components/about';
+import cosmeticServices from './components/cosmeticServices';
+import generalServices from './components/generalServices';
+import surgicalServices from './components/surgicalServices';
+import form from './components/form';
 
 
 function App()
@@ -18,22 +18,18 @@ function App()
   // render()
   // {
   return (
-    <Router>
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Dr Shetty's Total Dental Care
-        </p>  
-      </header>
-      <br/>
-      <Route path="/" component={index}></Route>
+    <Router basename='/'>
+
+      
       <Route path="/about" component={about}></Route>
+      <Route exact path="/" component={Index}></Route>
+     
       <Route path="/cosmeticServices" component={cosmeticServices}></Route>
       <Route path="/generalServices" component={generalServices}></Route>
       <Route path="/surgicalServices" component={surgicalServices}></Route>
       <Route path="/bookAppointment" component={form}></Route>
-
-    </div>
+      
+     
     </Router>
   );
 }
