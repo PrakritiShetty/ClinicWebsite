@@ -20,7 +20,7 @@ export default class Index extends Component
                   <li className="navbar-item px-1"><img src="./images/linkedinLogopng.png" height="25" width="25"></img>
                   </li>
                   <li className="navbar-item ">
-                      <p style={{fontSize:10, margin:10, color:"white"}}>Copyright@2022</p>
+                      <p style={{fontSize:13, margin:10, color:"white"}}>Copyright@2022</p>
                   </li>
               </ul>
           </nav>
@@ -45,20 +45,20 @@ export default class Index extends Component
                               </ul>
                               </nav>
                   </li>
-                  <li className="navbar-item ms-auto">
+                  {/* <li className="navbar-item ms-auto">
                       <p class="form-check form-switch ms-auto">
                           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                           <span><label class="form-check-label" for="flexSwitchCheckDefault"
                               style={{fontSize: '10px'}}>Theme</label></span>
                       </p>
-                  </li>
+                  </li> */}
               </ul>
   
           </nav>
   
       </header>
       
-      <nav className="navbar navbar-dark navbar-expand-lg" style={{backgroundColor:"AliceBlue"}}>
+      <nav className="navbar navbar-dark navbar-expand-lg" style={{backgroundColor:"LavenderBlush"}}>
           <div className="collapse navbar-collapse">
               <ul className="navbar-nav me-auto">
                   <li style={{fontFamily:"Lucida Handwriting"}}><em><b>Dr Sandhya Shankar Shetty</b></em> & <em><b>Dr
