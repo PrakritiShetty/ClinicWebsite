@@ -95,6 +95,7 @@ export default class Index extends Component
       </iframe> */}
   
   
+  
       <Carousel>
           <Carousel.Item style={{height:"500px"}}>
             
@@ -146,6 +147,56 @@ export default class Index extends Component
       </Carousel>
 
       
+    <br></br>
+    <Card style={{ width: '100%', height:'max-height', backgroundColor:"LightPink" }}>
+
+<Card.Body style={{scrollbarWidth:"none"}}>
+    {/* <Card.Title style={{color:"black"}}>Name</Card.Title> */}
+    <Card.Text style={{color:"black"}}>
+    <nav className="navbar navbar-expand-sm container-fluid">
+        <ul className="navbar-nav ms-auto">
+        <li className="navbar-item"><img src="./images/cat3.jpg" style={{height:200, width:200, margin:20}}></img></li>
+        <li style={{marginTop:20, fontSize:25}}>Dr Sandhya Shetty has completed her B.D.S from Government Dental College, Aurangabad. She has an experience of almost 30 years in the field. Rest assured, her work is of utmost quality and precision. Her interests include ABC and XYZ.<br></br>
+        <br></br>
+              <ul className="navbar-nav me-auto">
+                  <li className="navbar-item px-3"><img src="./images/facebookLogo.png" height="50" width="50"></img></li>
+                  <li className="navbar-item"><img src="./images/instagramLogopng.png" height="50" width="50"></img></li>
+                  <li className="navbar-item px-3"><img src="./images/linkedinLogopng.png" height="50" width="50"></img>
+                  </li>
+                  
+              </ul></li>
+        </ul>
+        </nav>
+    </Card.Text>
+    {/* <Button variant="primary">Go somewhere</Button> */}
+</Card.Body>
+</Card>
+
+<Card style={{ width: '100%', height:'max-height', backgroundColor:"LightPink" }}>
+<Card.Body style={{scrollbarWidth:"none"}}>
+    {/* <Card.Title style={{color:"black"}}>Name</Card.Title> */}
+    <Card.Text style={{color:"black"}}>
+        <nav className="navbar navbar-expand-sm container-fluid">
+        <ul className="navbar-nav me-auto">
+        
+        <li style={{marginTop:20, fontSize:25}}>Dr Pratiksha Shetty has completed her B.D.S from Nair Hospital and Dental College, Mumbai. She is currently pursuing her M.D.S from Government Dental College, XYZ. Her interests include ABC and XYZ<br></br>
+        <br></br>
+              <ul className="navbar-nav ms-auto">
+                  <li className="navbar-item px-3"><img src="./images/facebookLogo.png" height="50" width="50"></img></li>
+                  <li className="navbar-item"><img src="./images/instagramLogopng.png" height="50" width="50"></img></li>
+                  <li className="navbar-item px-3"><img src="./images/linkedinLogopng.png" height="50" width="50"></img>
+                  </li>
+                  
+              </ul>
+          </li>
+        <li className="navbar-item"><img src="./images/cat1.jpg" style={{height:200, width:200, margin:20}}></img></li>
+        
+        </ul>
+        </nav>
+    </Card.Text>
+    {/* <Button variant="primary">Go somewhere</Button> */}
+</Card.Body>
+</Card>
     <br></br>
     <div style={{height:"500px"}}>
 
