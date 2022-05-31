@@ -1,12 +1,43 @@
-import React, {Component}   from 'react';
+import React   from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import Card from 'react-bootstrap/Card'
 import {AiOutlineHome, AiOutlineFacebook, AiOutlineTwitter, AiOutlineLinkedin} from "react-icons/ai"  
 import {Link} from 'react-router-dom';
+import {Dropdown,DropdownToggle,DropdownMenu,DropdownItem} from "reactstrap";
 
 
-export default class Index extends Component
+export default class Index extends React.Component
 {
+
+    constructor(props) {
+        super(props);
+    
+        this.toggle1 = this.toggle1.bind(this);
+        this.toggle2 = this.toggle2.bind(this);
+        
+        // this.onMouseEnter = this.onMouseEnter.bind(this); 
+        // this.onMouseLeave = this.onMouseLeave.bind(this);
+        this.state = {
+          dropdownOpen1: false,
+          dropdownOpen2: false,
+          
+        };
+      }
+    
+      toggle1() {
+        this.setState(prevState => ({
+          dropdownOpen1: !prevState.dropdownOpen1,
+          
+        }));
+      }
+      toggle2() {
+        this.setState(prevState => ({
+          dropdownOpen2: !prevState.dropdownOpen2
+        }));
+      }   
+      
+
+
     render()
     {
     return(
@@ -26,11 +57,7 @@ export default class Index extends Component
           </nav>
   
           <nav className="navbar-brand" style={{fontFamily:"Times New Roman", width:'100%'}}>
-              <ul className="navbar-nav" style={{backgroundImage: 
-      "url('./images/back.png')",
-      width:'100%',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'space'}}>
+              <ul className="navbar-nav" style={{backgroundImage: "url('./images/back.png')",width:'100%',backgroundSize: 'cover',backgroundRepeat: 'space'}}>
                   <li className="navbar-item">
   
                       <p className="navbar-item" style={{fontFamily:"Lucida Handwriting"}}>Dr Shetty's</p>
@@ -69,7 +96,16 @@ export default class Index extends Component
   
               <ul className="navbar-nav ms-auto">
                   <li className="navbar-item">
-                      <p className="nav-link" style={{color:"grey"}}>About</p>
+                  
+                  <Dropdown className="d-inline" // onMouseOver={this.onMouseEnter} // onMouseLeave={this.onMouseLeave}
+                        isOpen={this.state.dropdownOpen1} toggle={this.toggle1}>
+                        <DropdownToggle caret>
+                            About
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem ><a href="#" style={{textDecoration:"none"}}>Home</a></DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
                   </li>
                   <li className="navbar-item">
                       <p className="nav-link" style={{color:"grey"}}>Services</p>
